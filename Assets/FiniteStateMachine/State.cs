@@ -9,11 +9,11 @@ namespace FiniteStateMachine
 		
 		public List<Transition> transitions;
 
-		public virtual void Tick()		{ }
+		public virtual void OnStart() { }
 
-		public virtual void OnStart()	{ }
+		public virtual void Tick() { }
 
-		public virtual void OnExit()	{ }
+		public virtual void OnExit() { }
 
 		public void Init()
 		{
