@@ -25,7 +25,7 @@ namespace FiniteStateMachine
 			foreach (Transition transition in transitions)
 			{
 				transition.SetCurrentState(this);
-				transition.Reset();
+				transition.ResetCondition();
 			}
 		}
 

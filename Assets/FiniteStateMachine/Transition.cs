@@ -9,7 +9,7 @@ namespace FiniteStateMachine
 
 		public virtual bool Condition()
 		{
-			return false;
+			return true;
 		}
 
 		public void SetCurrentState(State currentState)
@@ -17,6 +17,6 @@ namespace FiniteStateMachine
 			this.currentState = currentState;
 		}
 
-		public virtual void Reset() { }
+		public virtual void ResetCondition() { }
 	}
 }
