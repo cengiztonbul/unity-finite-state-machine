@@ -4,7 +4,7 @@ namespace FiniteStateMachine
 {
 	public class Transition : MonoBehaviour
 	{
-		public State nextState;		
+		public State nextState;
 		public State currentState;
 
 		public virtual bool Condition()
