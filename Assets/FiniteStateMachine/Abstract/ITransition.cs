@@ -7,5 +7,7 @@
 		IState NextState { get; set; }
 
 		bool Condition();
+
+		void InitTransition();
 	}
 }
