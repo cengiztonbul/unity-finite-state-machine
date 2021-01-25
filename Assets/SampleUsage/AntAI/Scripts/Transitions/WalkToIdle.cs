@@ -1,12 +1,15 @@
 ﻿using FiniteStateMachine;
 using UnityEngine;
 
-public class WalkToIdle : Transition
+namespace AntAI
 {
-	Vector3 target;
-
-	public override bool Condition()
+	public class WalkToIdle : Transition
 	{
-		return (transform.position - ((Walk)currentState).target).sqrMagnitude < 0.5f;
+		Vector3 target;
+
+		public override bool Condition()
+		{
+			return (transform.position - ((Walk)currentState).target).sqrMagnitude < 0.5f;
+		}
 	}
 }

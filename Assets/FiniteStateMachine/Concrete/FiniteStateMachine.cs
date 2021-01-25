@@ -25,6 +25,11 @@ namespace FiniteStateMachine.Concrete
 
 			nextState.OnStart();
 			ActiveState = nextState;
+			
+			foreach(ITransition transition in nextState.Transitions)
+			{
+				transition.InitTransition();
+			}
 		}
 
 		public void Tick()
