@@ -1,5 +1,6 @@
 ﻿using FiniteStateMachine;
 using UnityEngine;
+
 namespace AntAI
 {
 
@@ -7,16 +8,16 @@ namespace AntAI
 	{
 		[SerializeField] Vector2 horizontalBorders;
 		[SerializeField] Vector2 verticalBorders;
-	
+
 		public Vector3 target;
 		private Vector3 walkDirection;
 
 		public float speed = 3;
-	
+
 		public override void OnStart()
 		{
 			GetComponent<Renderer>().material.color = new Color(0.6f, 0.5f, 0.2f);
-		
+
 			target = RandomPosition();
 			walkDirection = (target - transform.position).normalized;
 		}
