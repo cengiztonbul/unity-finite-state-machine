@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using FiniteStateMachine.Abstract;
 
-namespace AntAI
+namespace AntAI.Transitions
 {
     public class IdleToWalk : ITransition
     {

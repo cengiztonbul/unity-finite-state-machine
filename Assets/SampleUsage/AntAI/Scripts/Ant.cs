@@ -26,7 +26,7 @@ public class Ant : MonoBehaviour
 		Idle idle = new Idle(gameObject, finiteStateMachine);
 		
 		ITransition walkToIdle = new WalkToIdle(gameObject, walk.target, walk, idle);
-		ITransition idleToWalk = new AntAI.IdleToWalk(idle, walk, 1, 3);
+		ITransition idleToWalk = new AntAI.Transitions.IdleToWalk(idle, walk, 1, 3);
 
 		walk.Transitions.Add(walkToIdle);
 		idle.Transitions.Add(idleToWalk);

@@ -1,25 +1,28 @@
 ﻿using FiniteStateMachine;
 using UnityEngine;
 
-public class AnyToRunAway : Transition 
+namespace AntAI
 {
-	Transform enemy;
-	[SerializeField] float dangerDistance = 2;
-	private float _dangerDistanceSqr;
-
-	private void Awake()
+	public class AnyToRunAway : Transition 
 	{
-		enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
-		_dangerDistanceSqr = dangerDistance * dangerDistance;
-	}
+		Transform enemy;
+		[SerializeField] float dangerDistance = 2;
+		private float _dangerDistanceSqr;
+
+		private void Awake()
+		{
+			enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+			_dangerDistanceSqr = dangerDistance * dangerDistance;
+		}
 	
-	public override bool Condition()
-	{
-		return DistanceSqrToEnemy() < _dangerDistanceSqr;
-	}
+		public override bool Condition()
+		{
+			return DistanceSqrToEnemy() < _dangerDistanceSqr;
+		}
 
-	public float DistanceSqrToEnemy()
-	{
-		return (transform.position - enemy.position).sqrMagnitude;
+		public float DistanceSqrToEnemy()
+		{
+			return (transform.position - enemy.position).sqrMagnitude;
+		}
 	}
 }
