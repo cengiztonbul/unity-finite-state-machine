@@ -24,7 +24,6 @@ namespace AntAI.Transitions
 
 		public bool Condition()
 		{
-			Debug.Log((enemy.position - transform.position).sqrMagnitude);
 			return (enemy.position - transform.position).sqrMagnitude > safeDistanceSqr;
 		}
 
