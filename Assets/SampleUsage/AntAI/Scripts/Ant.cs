@@ -41,6 +41,5 @@ public class Ant : MonoBehaviour
 	private void Update()
 	{
 		finiteStateMachine.Tick();
-		finiteStateMachine.CheckTransitions();
 	}
 }

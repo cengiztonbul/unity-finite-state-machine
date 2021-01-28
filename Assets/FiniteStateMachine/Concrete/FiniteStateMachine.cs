@@ -35,6 +35,7 @@ namespace FiniteStateMachine.Concrete
 		public void Tick()
 		{
 			ActiveState?.Tick();
+			CheckTransitions();
 		}
 
 		public void CheckTransitions()
